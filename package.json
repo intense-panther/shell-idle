@@ -1,0 +1,19 @@
+{
+  "name": "ocapp",
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=4.2.2"
+  },
+  "dependencies": {
+    "body-parser": "",
+    "co": "~4.6.0",
+    "express": "",
+    "minimist": "",
+    "morgan": "",
+    "mz": "~2.1.0",
+    "request": "",
+    "request-promise": "^1.0.2",
+    "shelljs": "^0.7.7",
+    "underscore": ">=1.8.3"
+  }
+}
