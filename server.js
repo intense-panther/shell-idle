@@ -21,11 +21,12 @@ app.all('/', function (req, res) {
 
 app.all('/env', function (req, res) {
   shell.exec("env");
-  // TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)
-  // KUBERNETES_SERVICE_HOST
-  // KUBERNETES_SERVICE_PORT
-  // oc rsh {pod}
   res.status(200).send("Done!\n");
+});
+
+app.all('/idle', function (req, res) {
+  var output = shell.exec("oc idle ocapp").stdout;
+  res.status(200).send(output);
 });
 
 app.listen(8888);
