@@ -20,8 +20,7 @@ app.all('/', function (req, res) {
 });
 
 app.all('/env', function (req, res) {
-  shell.exec("env");
-  res.status(200).send("Done!\n");
+  res.status(200).send(shell.exec("env").stdout);
 });
 
 app.all('/idle', function (req, res) {
